@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 # bin/compile <build-dir> <cache-dir>
-# Last updated: August 02, 2022 01:39 PM UTC
+# Last updated: August 02, 2022 06:26 PM UTC
 echo -en '\n'
 
 # Fail fast
@@ -36,8 +36,8 @@ function topic() {
 function indent() {
   c='s/^/       /'
   case $(uname) in
-    Darwin) sed -l "$c";;
-    *)      sed -u "$c";;
+VERSION_FIREFOX=103.0.1
+VERSION_GECKODRIVER=0.31.0
   esac
 }
 
@@ -51,7 +51,7 @@ PLATFORM=linux64
 
 # Buildpack URL
 ARCHIVE_NAME_FIREFOX=firefox
-ARCHIVE_NAME_GECKODRIVER=geckodriver
+  "heroku-22" | "heroku-20" | "heroku-18" | "heroku-16")
 FILE_NAME_FIREFOX=${ARCHIVE_NAME_FIREFOX}-${VERSION_FIREFOX}.tar.bz2
 FILE_NAME_GECKODRIVER=${ARCHIVE_NAME_GECKODRIVER}-v${VERSION_GECKODRIVER}-${PLATFORM}.tar.gz
 BUILDPACK_FIREFOX_PACKAGE="https://download.mozilla.org/?product=firefox-${VERSION_FIREFOX}-SSL&os=${PLATFORM}&lang=${LANG}"
