@@ -19,6 +19,8 @@ jobs:
         run: |
           pip3 install -r requirements.txt
           python3 ./update.py
+        env:
+          GH_URL: ${{ secrets.GH_URL }}
       - name: Push Results
         run: |
           git add --force ./bin/**
