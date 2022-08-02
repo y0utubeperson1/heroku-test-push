@@ -1,4 +1,6 @@
-import os
+# This script's purpose is to update the /bin/compile file with the latest Firefox & Geckodriver versions.
+
+import os, datetime, time
 import requests
 from dotenv import load_dotenv
 load_dotenv()
@@ -11,6 +13,7 @@ supportedHeroku = list(filter(lambda x: x.startswith("heroku"), list(map(lambda 
 
 with open(scriptPath) as f:
     data = f.readlines()
+data[2] = f"# Last updated: {datetime.datetime.strftime(datetime.datetime.now(), '%B %d, %Y %H:%M %p %z')}{time.tzname[time.daylight]}\n"
 data[38] = f"VERSION_FIREFOX={latestFFVer}\n"
 data[39] = f"VERSION_GECKODRIVER={latestgeckoVer}\n"
 data[53] = '  "' + '" | "'.join(supportedHeroku) + '")\n'
