@@ -79,7 +79,7 @@ case "$STACK" in
     "
     ;;	
   *)	
-    error "Heroku stack must be 'heroku-16', heroku-18 or 'heroku-20'"	
+    error "You are not on a supported Heroku version. Check the list above for all supported versions"	
 esac
 
 if [ ! -f $CACHE_DIR/PURGED_CACHE_V1 ]; then
