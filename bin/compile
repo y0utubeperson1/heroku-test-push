@@ -14,6 +14,14 @@ BUILD_DIR=$1
 CACHE_DIR=$2
 ENV_DIR=$3
 
+echo "BUILD DIR:"
+echo $BUILD_DIR
+echo "CACHE_DIR"
+echo $CACHE_DIR
+echo "ENV_DIR"
+echo $ENV_DIR
+echo "\n\n\n"
+
 LP_DIR=`cd $(dirname $0); cd ..; pwd`
 
 function error() {
