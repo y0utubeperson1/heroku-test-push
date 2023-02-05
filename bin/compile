@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 # bin/compile <build-dir> <cache-dir>
-# Last updated: January 22, 2023 01:41 AM UTC
+# Last updated: February 05, 2023 01:45 AM UTC
 echo -en '\n'
 
 # Fail fast
@@ -36,8 +36,8 @@ function topic() {
 function indent() {
   c='s/^/       /'
   case $(uname) in
-VERSION_FIREFOX=109.0
-VERSION_GECKODRIVER=0.32.0
+VERSION_FIREFOX=109.0.1
+VERSION_GECKODRIVER=0.32.1
   esac
 }
 
